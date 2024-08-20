@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:love_community_chapel/church.dart';
+import 'package:love_community_chapel/departments.dart';
+import 'package:love_community_chapel/services.dart';
+import 'package:love_community_chapel/widgets/payment.dart';
+
+
+
 
 class MyHome extends StatefulWidget {
   const MyHome({super.key});
@@ -61,15 +68,22 @@ class _MyHomeState extends State<MyHome> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           IconButton(
-                            onPressed: () {},
+                             onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const MyChurch(),
+                      ),
+                    );
+                  },
                             icon: const FaIcon(
-                              FontAwesomeIcons.peopleGroup,
+                              FontAwesomeIcons.building,
                               color: Color.fromARGB(255, 90, 11, 104),
                               size: 40,
                             ),
                           ),
                           Text(
-                            'Connect',
+                            'The Church',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.normal,
                               fontSize: 16.0,
@@ -80,6 +94,7 @@ class _MyHomeState extends State<MyHome> {
                       ),
                     ),
                     CardContainer(
+                      
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -87,15 +102,22 @@ class _MyHomeState extends State<MyHome> {
                             width: 50,
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const MyServices(),
+                      ),
+                    );
+                            },
                             icon: const FaIcon(
-                              FontAwesomeIcons.microphone,
+                              FontAwesomeIcons.calendar,
                               color: Color.fromARGB(255, 90, 11, 104),
                               size: 40,
                             ),
                           ),
                           Text(
-                            'Sermons',
+                            'Services',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.normal,
                               fontSize: 16.0,
@@ -139,7 +161,14 @@ class _MyHomeState extends State<MyHome> {
                             width: 50,
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const MyPayment(),
+                      ),
+                    );
+                            },
                             icon: const FaIcon(
                               FontAwesomeIcons.heart,
                               color: Color.fromARGB(255, 90, 11, 104),
@@ -167,15 +196,22 @@ class _MyHomeState extends State<MyHome> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                               Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const MyDepartments(),
+                      ),
+                    );
+                            },
                             icon: const FaIcon(
-                              FontAwesomeIcons.calendar,
+                              FontAwesomeIcons.peopleGroup,
                               color: Color.fromARGB(255, 90, 11, 104),
                               size: 40,
                             ),
                           ),
                           Text(
-                            'Events',
+                            'Departments',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.normal,
                               fontSize: 16.0,
@@ -245,7 +281,10 @@ class _MyHomeState extends State<MyHome> {
                             width: 50,
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+
+
+                            },
                             icon: const FaIcon(
                               FontAwesomeIcons.facebook,
                               color: Color.fromARGB(255, 90, 11, 104),
@@ -274,6 +313,7 @@ class _MyHomeState extends State<MyHome> {
   }
 }
 
+// ignore: must_be_immutable
 class CardContainer extends StatelessWidget {
   CardContainer({
     super.key,
