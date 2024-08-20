@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:love_community_chapel/home.dart';
@@ -17,7 +16,7 @@ class _LogInState extends State<LogIn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 74, 20, 140),
+          backgroundColor:  const Color.fromARGB(255, 90, 11, 104),
           leading: BackButton(
             onPressed: () {
               Navigator.push(
@@ -31,14 +30,7 @@ class _LogInState extends State<LogIn> {
           )),
       resizeToAvoidBottomInset: false,
       body: Container(
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(begin: Alignment.topCenter, colors: [
-            Color.fromARGB(255, 74, 20, 140),
-            Color.fromARGB(255, 106, 27, 154),
-            Color.fromARGB(255, 171, 71, 188)
-          ]),
-        ),
+        color:  const Color.fromARGB(255, 90, 11, 104),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -49,25 +41,27 @@ class _LogInState extends State<LogIn> {
               padding: const EdgeInsets.all(
                 20.0,
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Login',
-                    style: GoogleFonts.poppins(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Login',
+                      style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  Text(
-                    'Welcome Back',
-                    style: GoogleFonts.poppins(
-                      color: Colors.white,
-                      fontSize: 18,
+                    Text(
+                      'Welcome Back',
+                      style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontSize: 18,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             const SizedBox(
@@ -190,7 +184,7 @@ class _LogInState extends State<LogIn> {
                             borderRadius: BorderRadius.circular(
                               50,
                             ),
-                            color: const Color.fromARGB(255, 74, 20, 140),
+                            color:  const Color.fromARGB(255, 90, 11, 104),
                           ),
                           child: Center(
                               child: Text(
@@ -224,7 +218,7 @@ class _LogInState extends State<LogIn> {
                                 onPressed: () {},
                                 icon: const FaIcon(
                                   FontAwesomeIcons.google,
-                                  color: Color.fromARGB(255, 74, 20, 140),
+                                  color: Color.fromARGB(255, 90, 11, 104),
                                   size: 25,
                                 ),
                               ),
@@ -233,7 +227,7 @@ class _LogInState extends State<LogIn> {
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12.0,
-                                  color: const Color.fromARGB(255, 74, 20, 140),
+                                  color:  const Color.fromARGB(255, 90, 11, 104),
                                 ),
                               ),
                             ],
@@ -248,7 +242,7 @@ class _LogInState extends State<LogIn> {
                                 onPressed: () {},
                                 icon: const FaIcon(
                                   FontAwesomeIcons.facebook,
-                                  color: Color.fromARGB(255, 74, 20, 140),
+                                  color: Color.fromARGB(255, 90, 11, 104),
                                   size: 25,
                                 ),
                               ),
@@ -257,7 +251,7 @@ class _LogInState extends State<LogIn> {
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12.0,
-                                  color: const Color.fromARGB(255, 74, 20, 140),
+                                  color:  const Color.fromARGB(255, 90, 11, 104),
                                 ),
                               ),
                             ],

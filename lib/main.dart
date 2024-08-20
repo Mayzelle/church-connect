@@ -39,7 +39,7 @@ class _StartAppState extends State<StartApp> {
               // Color.fromARGB(255, 106, 27, 154),
               Color.fromARGB(255, 171, 71, 188),
               Color.fromARGB(255, 106, 27, 154),
-               Color.fromARGB(255, 74, 20, 140),
+               const Color.fromARGB(255, 90, 11, 104),
             ]),
           ),
           child: Center(
@@ -61,7 +61,7 @@ class _StartAppState extends State<StartApp> {
                   child: Text(
                     'Register',
                     style: GoogleFonts.poppins(
-                      color: Color.fromARGB(255, 74, 20, 140),
+                      color:  const Color.fromARGB(255, 90, 11, 104),
                       fontSize: 20,
                       fontWeight: FontWeight.w400
                     ),
@@ -82,7 +82,7 @@ class _StartAppState extends State<StartApp> {
                   child: Text(
                     'Log In',
                     style: GoogleFonts.poppins(
-                      color: Color.fromARGB(255, 74, 20, 140),
+                      color:  const Color.fromARGB(255, 90, 11, 104),
                       fontSize: 20,
                     ),
                   ),

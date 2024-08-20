@@ -14,9 +14,10 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 74, 20, 140),
+        backgroundColor:  const Color.fromARGB(255, 90, 11, 104),
         leading: BackButton(
           onPressed: () {
             Navigator.push(
@@ -31,21 +32,11 @@ class _RegisterState extends State<Register> {
       ),
       resizeToAvoidBottomInset: false,
       body: Container(
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            colors: [
-              Color.fromARGB(255, 74, 20, 140),
-              Color.fromARGB(255, 106, 27, 154),
-              Color.fromARGB(255, 171, 71, 188)
-            ],
-          ),
-        ),
+      color:  const Color.fromARGB(255, 90, 11, 104),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Text(
@@ -76,7 +67,7 @@ class _RegisterState extends State<Register> {
                   ),
                   child: Column(
                     children: [
-                      SizedBox(height: 60),
+                      const SizedBox(height: 60),
                       Container(
                         decoration: const BoxDecoration(
                           border: Border(
@@ -209,7 +200,7 @@ class _RegisterState extends State<Register> {
                             borderRadius: BorderRadius.circular(
                               50,
                             ),
-                            color: const Color.fromARGB(255, 74, 20, 140),
+                            color:  const Color.fromARGB(255, 90, 11, 104),
                           ),
                           child: Center(
                               child: Text(
@@ -242,7 +233,7 @@ class _RegisterState extends State<Register> {
                                 onPressed: () {},
                                 icon: const FaIcon(
                                   FontAwesomeIcons.google,
-                                  color: Color.fromARGB(255, 74, 20, 140),
+                                  color:  const Color.fromARGB(255, 90, 11, 104),
                                   size: 25,
                                 ),
                               ),
@@ -251,7 +242,7 @@ class _RegisterState extends State<Register> {
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12.0,
-                                  color: const Color.fromARGB(255, 74, 20, 140),
+                                  color:  const Color.fromARGB(255, 90, 11, 104),
                                 ),
                               ),
                             ],
@@ -266,7 +257,7 @@ class _RegisterState extends State<Register> {
                                 onPressed: () {},
                                 icon: const FaIcon(
                                   FontAwesomeIcons.facebook,
-                                  color: Color.fromARGB(255, 74, 20, 140),
+                                  color:   Color.fromARGB(255, 90, 11, 104),
                                   size: 25,
                                 ),
                               ),
