@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:love_community_chapel/church.dart';
 import 'package:love_community_chapel/departments.dart';
 import 'package:love_community_chapel/services.dart';
+import 'package:love_community_chapel/testimonies.dart';
 import 'package:love_community_chapel/widgets/payment.dart';
 
 
@@ -135,7 +136,14 @@ class _MyHomeState extends State<MyHome> {
                             width: 50,
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const TestimoniesScreen(),
+                      ),
+                    );
+                            },
                             icon: const FaIcon(
                               FontAwesomeIcons.message,
                               color: Color.fromARGB(255, 90, 11, 104),

@@ -28,6 +28,7 @@ class _MyPaymentState extends State<MyPayment> {
       body: SingleChildScrollView(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        
         children: [
           const SizedBox(
             height: 30,
@@ -65,7 +66,7 @@ class _MyPaymentState extends State<MyPayment> {
               ),
             ),
              child: Text(
-              'Pay with card',
+              'MAKE PAYMENT',
               style: GoogleFonts.poppins(
                 color:  const Color.fromARGB(255, 90, 11, 104),
                 fontSize: 20,
@@ -73,92 +74,7 @@ class _MyPaymentState extends State<MyPayment> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.all(10.0),
-              backgroundColor: Colors.white,
-              fixedSize: const Size(350.0, 70.0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),
-            child: Text(
-              'Pay with MTN',
-              style: GoogleFonts.poppins(
-                color:  const Color.fromARGB(255, 90, 11, 104),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.all(10.0),
-              backgroundColor: Colors.white,
-              fixedSize: const Size(350.0, 70.0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),
-             child: Text(
-              'Pay with TELECEL',
-              style: GoogleFonts.poppins(
-                color:  const Color.fromARGB(255, 90, 11, 104),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-            onPressed: () {
-              showDialog(
-                context: context, 
-                builder: (context) => AlertDialog(
-                  actions: [
-                    Container(
-                      width: 550,
-            height: 60,
-            decoration: BoxDecoration(
-              boxShadow: const [
-                                BoxShadow(
-                                  color: Color.fromARGB(98, 121, 121, 121),
-                                  blurRadius: 1,
-                                  offset: Offset(0,2 ),
-                                ),
-                              ],
-                color: Colors.white, borderRadius: BorderRadius.circular(10)),
-                    )
-                  ]
-                ));
-            },
-            style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.all(10.0),
-              backgroundColor: Colors.white,
-              fixedSize: const Size(350.0, 70.0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),
-             child: Text(
-              'Pay with AIRTELTIGO',
-              style: GoogleFonts.poppins(
-                color:  const Color.fromARGB(255, 90, 11, 104),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
+          
         ],
       )),
     );

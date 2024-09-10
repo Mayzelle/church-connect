@@ -1,0 +1,22 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "love-community-chapel",
+                    "appId": "1:628167730463:android:17623b68430cb2eb08bc2a",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "love-community-chapel",
+                    "configurations": {
+                        "android": "1:628167730463:android:17623b68430cb2eb08bc2a",
+                        "ios": "1:628167730463:ios:6ba748aa9e6222d808bc2a"
+                    }
+                }
+            }
+        }
+    }
+}
