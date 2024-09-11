@@ -9,8 +9,9 @@ class LoginUseCase implements UseCase<DataState<UserEntity>, UserRequestModel> {
 
   LoginUseCase( this.authRepository );
 
+  @override
   Future<DataState<UserEntity>> call (UserRequestModel userRequest) async {
-    return await authRepository.register(userRequest: userRequest);
+    return await authRepository.login(userRequest: userRequest);
   }
   
 }

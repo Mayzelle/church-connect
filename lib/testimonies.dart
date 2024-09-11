@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:logger/logger.dart';
 import 'package:love_community_chapel/config/theme/custom-card.dart';
+import 'package:love_community_chapel/config/theme/custom-popup-menu.dart';
 import 'package:love_community_chapel/core/data/testimonies.dart';
 
 class TestimoniesScreen extends StatefulWidget {
@@ -11,6 +13,17 @@ class TestimoniesScreen extends StatefulWidget {
 }
 
 class _TestimoniesScreenState extends State<TestimoniesScreen> {
+  String filterValue = '';
+
+  List filterTestimonies() {
+    if (filterValue.isEmpty) {
+      return testimonies;
+    }
+    return testimonies
+        .where((element) => element['category'].toString() == filterValue)
+        .toList();
+  }
+
   // Build AppBar
   AppBar _buildAppBar() {
     return AppBar(
@@ -22,6 +35,18 @@ class _TestimoniesScreenState extends State<TestimoniesScreen> {
       centerTitle: true,
       backgroundColor: const Color.fromARGB(255, 90, 11, 104),
       actions: [
+        CustomPopupMenu(
+            items: testimonies.isNotEmpty
+                ? filterTestimonies()
+                    .map((e) => e['category'].toString())
+                    .toSet()
+                    .toList()
+                : [],
+            onSelected: (value) {
+              filterValue = value;
+              setState(() {});
+            },
+            child: const Icon(Icons.filter_list_rounded)),
         IconButton(
           onPressed: () {},
           icon: const Icon(FontAwesomeIcons.plus),
@@ -37,18 +62,17 @@ class _TestimoniesScreenState extends State<TestimoniesScreen> {
       children: testimonies.isNotEmpty
           ? testimonies
               .map((e) => Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          CustomCard.testimoniesCard(
-                            name: e['name'],
-                            age: e['age'],
-                            description: e['description'],
-                            category: e['category'],
-                          ),
-                          const SizedBox(height: 10)
-                        ],
-                      )
-                  )
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      CustomCard.testimoniesCard(
+                        name: e['name'],
+                        age: e['age'],
+                        description: e['description'],
+                        category: e['category'],
+                      ),
+                      const SizedBox(height: 10)
+                    ],
+                  ))
               .toList()
           : [],
     );

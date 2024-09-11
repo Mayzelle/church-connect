@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:love_community_chapel/config/theme/custom-dropdown-menu.dart';
 import 'package:love_community_chapel/features/auth/data/models/user-request-model.dart';
 import 'package:love_community_chapel/features/auth/presentation/bloc/auth_bloc.dart';
-import 'package:love_community_chapel/home.dart';
+import 'package:love_community_chapel/features/auth/presentation/pages/home.dart';
 import 'package:love_community_chapel/main.dart';
 
 class Register extends StatefulWidget {

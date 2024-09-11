@@ -17,9 +17,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     this.loginUseCase,
     this.registerUseCase
   ) : super(AuthInitial()) {
-    on<AuthEvent>((event, emit) {
-      // TODO: implement event handler
-    });
     on<AuthEventRegister>(register);
     on<AuthEventLogin>(login);
   }

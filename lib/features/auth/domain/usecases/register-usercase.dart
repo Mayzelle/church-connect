@@ -8,6 +8,7 @@ class RegisterUseCase implements UseCase<DataState<UserEntity>, UserRequestModel
   final AuthRepository authRepository;
   RegisterUseCase(this.authRepository);
 
+  @override
   Future<DataState<UserEntity>> call(UserRequestModel requestModel) async {
     return await authRepository.register(userRequest: requestModel);
   }
